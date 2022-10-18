@@ -1,16 +1,14 @@
-import { StyleSheet, Text, SafeAreaView, StatusBar, View } from 'react-native';
-import { BottomNavigation } from 'react-native-paper';
+import { StyleSheet, SafeAreaView, StatusBar, View } from 'react-native';
+
+import Header from '../layouts/components/Header'
+import Footer from '../layouts/components/Footer'
 
 export default function DefaultLayout({ children }) {
     return (
         <SafeAreaView style={styles.container}>
-            <View style={styles.header}>
-                <Text>Header</Text>
-            </View>
+            <Header />
             <View style={styles.content}>{children}</View>
-            <View style={styles.footer}>
-                <Text>Bottom</Text>
-            </View>
+            <Footer />
         </SafeAreaView>
     );
 }
@@ -19,16 +17,5 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         marginTop: StatusBar.currentHeight,
-    },
-    header: {
-        padding: 16,
-        backgroundColor: 'purple',
-    },
-    content: {
-        flex: 1,
-    },
-    footer: {
-        padding: 16,
-        backgroundColor: 'purple',
     },
 });
