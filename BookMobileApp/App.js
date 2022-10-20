@@ -34,8 +34,6 @@ export default function App() {
                         )
                     }
 
-                    // const Guard = navigation.guard || Fragment;
-
                     return (
                         <Stack.Screen
                             key={index}

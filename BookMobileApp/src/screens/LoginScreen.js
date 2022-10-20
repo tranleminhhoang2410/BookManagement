@@ -1,4 +1,4 @@
-import { View, StyleSheet, Button, TouchableOpacity, Text } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
 import { TextInput } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 
@@ -8,7 +8,7 @@ export default function LoginScreen() {
         <View>
             <TextInput label="Email" mode="outline" style={styles.input} />
             <TextInput label="Password" mode="outline" style={styles.input} />
-            <TouchableOpacity style={styles.login}>
+            <TouchableOpacity style={styles.login} onPress={() => navigation.navigate('Books')}>
                 <Text style={styles.text}>Log in</Text>
             </TouchableOpacity>
             <Text style={styles.signup} onPress={() => navigation.navigate('Signup')}>
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         marginTop: 12,
         padding: 12,
         textAlign: 'center',
-        color: 'aquablue',
+        color: '#1E90FF',
     },
     text: {
         color: '#fff',

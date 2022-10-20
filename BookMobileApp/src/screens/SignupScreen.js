@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         marginTop: 12,
         padding: 12,
         textAlign: 'center',
-        color: 'blue',
+        color: '#1E90FF',
     },
     signup: {
         marginTop: 12,
